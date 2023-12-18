@@ -265,7 +265,7 @@ remove(@Param('id') id: string) {   // id diurai sebagai string
 
 Karena id didefinisikan sebagai tipe string, API Swagger juga mendokumentasikan argumen ini sebagai string dalam dokumentasi API yang dihasilkan. Ini tidak intuitif dan tidak benar.
 
-![Alt text](image-13.png)
+![Alt text](./images/image-13.png)
 
 Daripada melakukan transformasi ini secara manual di dalam handler rute, Anda dapat menggunakan sebuah NestJS pipe untuk mengonversi id menjadi tipe angka secara otomatis. Tambahkan ParseIntPipe bawaan ke handler rute controller untuk tiga endpoint berikut:
 
@@ -312,7 +312,7 @@ export class ArticlesController {
 
 ParseIntPipe akan mengintersep parameter id berjenis string dan secara otomatis menguraikannya menjadi tipe angka sebelum meneruskannya ke handler rute yang sesuai. Ini juga memiliki keuntungan mendokumentasikan parameter id dengan benar sebagai angka di dalam Swagger.
 
-![Alt text](image-14.png)
+![Alt text](./images/image-14.png)
 
 Ringkasan dan Kesimpulan Akhir
 
